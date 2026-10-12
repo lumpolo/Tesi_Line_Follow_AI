@@ -1,0 +1,2122 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5381808498460648 -0.47555313104208075 0.6958524214336261 4.392591819965418
+  position 1.1716675087117054 1.553011485429452 0.8963003276828438
+}
+TexturedBackground {
+  texture "noon_park_empty"
+  luminosity 0
+  skybox FALSE
+  skyColor [
+    1 1 1
+  ]
+}
+TexturedBackgroundLight {
+}
+Solid {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile"
+}
+Solid {
+  translation 1.2 1.3 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y"
+}
+Solid {
+  translation 1.2 1.2 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(1)"
+}
+Solid {
+  translation 1.2 1.1 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(2)"
+}
+Solid {
+  translation 1.2 1 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(3)"
+}
+Solid {
+  translation 1.2 0.76 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(4)"
+}
+Solid {
+  translation 1.17 0.88 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(5)"
+}
+Solid {
+  translation 0.9 0.61 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(6)"
+}
+Solid {
+  translation 0.93 0.49 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(7)"
+}
+Solid {
+  translation 0.35 0.48 0.101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(8)"
+}
+Solid {
+  translation 0.35 0.38 0.101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(14)"
+}
+Solid {
+  translation 0.53 0.26 0.101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(15)"
+}
+Solid {
+  translation 0.35 0.58 0.101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(12)"
+}
+Solid {
+  translation 0.35 0.68 0.101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(13)"
+}
+Solid {
+  translation 0.24 0.39 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(9)"
+}
+Solid {
+  translation 0.3 0.11 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(10)"
+}
+Solid {
+  translation 0.3 -0.13 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(11)"
+}
+Solid {
+  translation 0.2 -0.23 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(16)"
+}
+Solid {
+  translation 0.2 -0.58 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(18)"
+}
+Solid {
+  translation 0.18 -0.408 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_y(17)"
+}
+Solid {
+  translation 0.27 0.31 0.1
+  rotation 0 0 1 0.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique"
+}
+Solid {
+  translation 0.27 0.19 0.1
+  rotation 0 0 1 0.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(2)"
+}
+Solid {
+  translation 0.23 -0.31 0.1
+  rotation 0 0 1 0.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(7)"
+}
+Solid {
+  translation 0.27 0.25 0.1
+  rotation 0 0 1 -0.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(1)"
+}
+Solid {
+  translation 0.23 -0.5 0.1
+  rotation 0 0 1 -0.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(8)"
+}
+Solid {
+  translation 0.26 0.05 0.1
+  rotation 0 0 1 -1.2735996938995748
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(3)"
+}
+Solid {
+  translation 0.16 -0.64 0.1
+  rotation 0 0 1 -1.2735996938995748
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(9)"
+}
+Solid {
+  translation 0.26 -0.04 0.1
+  rotation 0 0 1 -1.2735996938995748
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(5)"
+}
+Solid {
+  translation 0.26 0.02 0.1
+  rotation 0 0 1 1.2736
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(4)"
+}
+Solid {
+  translation 0.16 -0.67 0.1
+  rotation 0 0 1 1.2736
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(10)"
+}
+Solid {
+  translation 0.26 -0.07 0.1
+  rotation 0 0 1 1.2736
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.006
+      }
+    }
+  ]
+  name "Line_oblique(6)"
+}
+Solid {
+  translation 1.2 0.685 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.05 0.006
+      }
+    }
+  ]
+  name "Line_y_small"
+}
+Solid {
+  translation 0.81 0.465 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.05 0.006
+      }
+    }
+  ]
+  name "Line_y_small(1)"
+}
+Solid {
+  translation 0.29 0.465 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.05 0.006
+      }
+    }
+  ]
+  name "Line_y_small(2)"
+}
+Solid {
+  translation 0.3 -0.01 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.05 0.006
+      }
+    }
+  ]
+  name "Line_y_small(3)"
+}
+Solid {
+  translation 0.2 -0.71 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.05 0.006
+      }
+    }
+  ]
+  name "Line_y_small(4)"
+}
+Solid {
+  translation 1.16 0.65 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x"
+}
+Solid {
+  translation 1.06 0.65 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(1)"
+}
+Solid {
+  translation 0.96 0.65 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(2)"
+}
+Solid {
+  translation 0.87 0.45 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(3)"
+}
+Solid {
+  translation 0.75 0.48 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(4)"
+}
+Solid {
+  translation 0.39 0.32 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(7)"
+}
+Solid {
+  translation 0.49 0.32 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(8)"
+}
+Solid {
+  translation 0.35 0.48 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(5)"
+}
+Solid {
+  translation 0.24 -0.17 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(6)"
+}
+Solid {
+  translation 0.26 -0.725 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(11)"
+}
+Solid {
+  translation 0.22 -0.348 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(9)"
+}
+Solid {
+  translation 0.22 -0.469 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x(10)"
+}
+Solid {
+  translation -1 0.33 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.02 0.006
+      }
+    }
+  ]
+  name "Finish_Line_x"
+}
+Solid {
+  translation 1.185 0.94 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x_small"
+}
+Solid {
+  translation 1.185 0.82 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x_small(1)"
+}
+Solid {
+  translation 0.915 0.55 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x_small(2)"
+}
+Solid {
+  translation 0.55 0.48 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x_small(3)"
+}
+Solid {
+  translation 0.275 0.43 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.02 0.006
+      }
+    }
+  ]
+  name "Line_x_small(4)"
+}
+Solid {
+  translation 0.3 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva"
+}
+Solid {
+  translation 0.6 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva(1)"
+}
+Solid {
+  translation 0.9 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva(2)"
+}
+Solid {
+  translation 1.2 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva(3)"
+}
+Solid {
+  translation 0.3 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva"
+}
+Solid {
+  translation 0.3 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(1)"
+}
+Solid {
+  translation 0.3 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(2)"
+}
+Solid {
+  translation 0.3 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(3)"
+}
+Solid {
+  translation 0.6 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(4)"
+}
+Solid {
+  translation 0.9 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(5)"
+}
+Solid {
+  translation 1.2 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(6)"
+}
+Solid {
+  translation 1.2 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(7)"
+}
+Solid {
+  translation 1.2 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(8)"
+}
+Solid {
+  translation 1.2 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(9)"
+}
+Solid {
+  translation 0.9 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(10)"
+}
+Solid {
+  translation 0.6 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(11)"
+}
+Solid {
+  translation 0.6 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(12)"
+}
+Solid {
+  translation 0.6 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(13)"
+}
+Solid {
+  translation 0.9 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(14)"
+}
+Solid {
+  translation 0.9 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_positiva(15)"
+}
+Solid {
+  translation -0.3 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva"
+}
+Solid {
+  translation -0.3 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(1)"
+}
+Solid {
+  translation -0.3 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(2)"
+}
+Solid {
+  translation -0.3 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(3)"
+}
+Solid {
+  translation -0.6 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(4)"
+}
+Solid {
+  translation -0.9 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(5)"
+}
+Solid {
+  translation -1.2 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(6)"
+}
+Solid {
+  translation -1.2 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(7)"
+}
+Solid {
+  translation -1.2 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(8)"
+}
+Solid {
+  translation -1.2 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(9)"
+}
+Solid {
+  translation -0.9 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(10)"
+}
+Solid {
+  translation -0.6 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(11)"
+}
+Solid {
+  translation -0.6 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(12)"
+}
+Solid {
+  translation -0.6 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(13)"
+}
+Solid {
+  translation -0.9 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(14)"
+}
+Solid {
+  translation -0.9 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_positiva(15)"
+}
+Solid {
+  translation 0.3 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa"
+}
+Solid {
+  translation 0.3 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(1)"
+}
+Solid {
+  translation 0.3 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(2)"
+}
+Solid {
+  translation 0.3 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(3)"
+}
+Solid {
+  translation 0.6 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(4)"
+}
+Solid {
+  translation 0.9 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(5)"
+}
+Solid {
+  translation 1.2 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(6)"
+}
+Solid {
+  translation 1.2 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(7)"
+}
+Solid {
+  translation 1.2 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(8)"
+}
+Solid {
+  translation 1.2 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(9)"
+}
+Solid {
+  translation 0.9 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(10)"
+}
+Solid {
+  translation 0.6 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(11)"
+}
+Solid {
+  translation 0.6 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(12)"
+}
+Solid {
+  translation 0.6 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(13)"
+}
+Solid {
+  translation 0.9 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(14)"
+}
+Solid {
+  translation 0.9 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_positiva_y_negativa(15)"
+}
+Solid {
+  translation -0.3 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa"
+}
+Solid {
+  translation -0.3 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(1)"
+}
+Solid {
+  translation -0.3 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(2)"
+}
+Solid {
+  translation -0.3 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(3)"
+}
+Solid {
+  translation -0.6 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(4)"
+}
+Solid {
+  translation -0.9 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(5)"
+}
+Solid {
+  translation -1.2 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(6)"
+}
+Solid {
+  translation -1.2 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(7)"
+}
+Solid {
+  translation -1.2 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(8)"
+}
+Solid {
+  translation -1.2 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(9)"
+}
+Solid {
+  translation -0.9 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(10)"
+}
+Solid {
+  translation -0.6 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(11)"
+}
+Solid {
+  translation -0.6 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(12)"
+}
+Solid {
+  translation -0.6 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(13)"
+}
+Solid {
+  translation -0.9 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(14)"
+}
+Solid {
+  translation -0.9 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa_y_negativa(15)"
+}
+Solid {
+  translation -0.3 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa"
+}
+Solid {
+  translation -0.6 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa(1)"
+}
+Solid {
+  translation -0.9 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa(2)"
+}
+Solid {
+  translation -1.2 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_x_negativa(3)"
+}
+Solid {
+  translation 0 0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_positiva"
+}
+Solid {
+  translation 0 0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_positiva(1)"
+}
+Solid {
+  translation 0 0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_positiva(2)"
+}
+Solid {
+  translation 0 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_positiva(3)"
+}
+Solid {
+  translation 0 -0.3 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_negativa"
+}
+Solid {
+  translation 0 -0.6 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_negativa(1)"
+}
+Solid {
+  translation 0 -0.9 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_negativa(2)"
+}
+Solid {
+  translation 0 -1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "Tile asse_y_negativa(3)"
+}
+Solid {
+  name "floor"
+  boundingObject Box {
+    size 10 10 0.2
+  }
+}
+E-puck {
+  translation 1.2 1.30958 0.0997076
+  rotation 0.0013577871301837588 -0.00033193076208425933 0.999999023117562 -1.5382003061004252
+  controller "AI"
+  camera_fieldOfView 1.14
+  camera_width 308
+  camera_height 215
+  camera_rotation 0 1 0 0.3
+  turretSlot [
+    Display {
+      name "display_raw"
+      width 308
+      height 215
+    }
+    Display {
+      name "display_roi"
+      width 308
+      height 215
+    }
+  ]
+}
