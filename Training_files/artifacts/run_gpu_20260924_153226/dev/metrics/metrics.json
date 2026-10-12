@@ -1,0 +1,13 @@
+{
+    "device": "gpu",
+    "timestamp": "20260924_153226",
+    "mae": 2.9619295597076416,
+    "rmse": 3.920287609100342,
+    "r2": 0.9889493584632874,
+    "target_mean_train": -5.085079193115234,
+    "target_std_train": 36.12316131591797,
+    "n_test_samples": 951,
+    "input_range": "none",
+    "expected_image_range": "[-1, 1]",
+    "training_minutes": 6.95
+}
