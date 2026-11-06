@@ -1,0 +1,7 @@
+{
+    "mean inference_time": 0.014024916911285195,
+    "std inference_time": 0.003857250082255654,
+    "max positive error": 50.30206298828125,
+    "max negative error": -33.50254821777344,
+    "mean error": 0.7804300724615543
+}

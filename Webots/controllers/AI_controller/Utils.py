@@ -1,29 +1,29 @@
 import cv2
 import numpy as np
 
-
 MODEL_WIDTH = 224
 MODEL_HEIGHT = 224
 
 
 def get_mask(image_bgr):
     """
-    Riceve un'immagine BGR OpenCV e restituisce una maschera binaria
-    della linea tramite Otsu + inversione.
+    Receve a BGR OpenCV and returns a mask of the line.
+    The mask is obtained by thresholding the grayscale version 
+    of the image using Otsu's method, and then inverting it.
 
     Parameters
     ----------
     image_bgr : np.ndarray
-        Immagine con shape (H, W, 3), in formato BGR.
+        Image with shape (H, W, 3), in BGR format.
 
     Returns
     -------
     np.ndarray
-        Maschera uint8 con shape (H, W), valori 0 oppure 255.
+        Binary mask with shape (H, W), values 0 or 255.
     """
-    gray = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2GRAY) # Convert to grayscale
 
-    _, mask = cv2.threshold(
+    _, mask = cv2.threshold(                           # Apply Otsu's thresholding
         gray,
         0,
         255,
@@ -33,49 +33,44 @@ def get_mask(image_bgr):
     return mask
 
 
-def adjust_camera_image(image_bgr):
+def adjust_camera_image(image_bgr, masked=False):
     """
-    Prepara un frame BGR per il modello.
+    Preprocess the input image for the ONNX model.
 
     Pipeline:
-      1. Maschera Otsu invertita.
-      2. Resize a 224 x 224.
-      3. Normalizzazione [0, 255] -> [-1, 1].
-      4. Conversione a 3 canali identici.
-
-    Parameters
-    ----------
-    image_bgr : np.ndarray
-        Frame OpenCV BGR, shape (H, W, 3).
+      1. Resize to 224 x 224 using INTER_NEAREST.
+      2. Apply Otsu mask if masked=True.
+      3. Convert BGR to RGB (or grayscale mask to RGB).
+      4. Normalize [0, 255] -> [-1, 1].
 
     Returns
     -------
     np.ndarray
-        Immagine float32, shape (224, 224, 3), intervallo [-1, 1].
+        Image float32, shape (224, 224, 3), interval [-1, 1].
     """
-    mask = get_mask(image_bgr)
 
-    resized = cv2.resize(
-        mask,
+    resized = cv2.resize(                                           # Resize the image to the model's expected input size
+        image_bgr,
         (MODEL_WIDTH, MODEL_HEIGHT),
-        interpolation=cv2.INTER_AREA
+        interpolation=cv2.INTER_NEAREST
     )
 
-    normalized = resized.astype(np.float32) / 255.0
-    normalized = normalized * 2.0 - 1.0
+    if masked:                                                      # If masked is True, apply Otsu's mask to the resized image
+        processed = get_mask(resized)
+        processed = cv2.cvtColor(processed, cv2.COLOR_GRAY2RGB)     # Convert the grayscale mask to RGB
+    else:
+        processed = cv2.cvtColor(resized, cv2.COLOR_BGR2RGB)        # Convert the resized BGR image to RGB
 
-    # Da (224, 224) a (224, 224, 3)
-    model_image = np.stack(
-        [normalized, normalized, normalized],
-        axis=-1
-    )
+    normalized = processed.astype(np.float32)                       # Normalize the image to the range [-1, 1]
+    normalized /= 127.5                                             # Scale the values to the range [0, 1]
+    normalized -= 1.0                                               # Shift the values to the range [-1, 1]
 
-    return model_image.astype(np.float32)
+    return normalized
 
 
 def get_onnx_input_layout(session):
     """
-    Determina il layout dell'input richiesto dal modello ONNX.
+    Determines the input layout required by the ONNX model.
 
     Returns
     -------
@@ -87,41 +82,41 @@ def get_onnx_input_layout(session):
 
     if len(input_shape) != 4:
         raise ValueError(
-            "Il modello ONNX deve ricevere un tensore a 4 dimensioni. "
-            f"Shape rilevata: {input_shape}"
+            "The ONNX model must receive a 4-dimensional tensor. "
+            f"Detected shape: {input_shape}"
         )
 
-    # Modelli PyTorch esportati in ONNX: (N, 3, H, W)
+    # PyTorch exported models: (N, 3, H, W)
     if input_shape[1] == 3:
         return "NCHW"
 
-    # Modelli TensorFlow/Keras esportati in ONNX: (N, H, W, 3)
+    # TensorFlow/Keras exported models: (N, H, W, 3)
     if input_shape[-1] == 3:
         return "NHWC"
 
     raise ValueError(
-        "Impossibile riconoscere il layout dell'input ONNX. "
-        f"Shape rilevata: {input_shape}"
+        "Impossible to recognize the ONNX input layout. "
+        f"Detected shape: {input_shape}"
     )
 
 
 def apply_onnx_model(session, image):
     """
-    Esegue una predizione con il modello ONNX.
+    Executes a prediction with the ONNX model.
 
-    Il file final_model.onnx include gia' la destandardizzazione:
+    The final_model.onnx file already includes the destandardization:
         output = output_standardizzato * sigma_y + mu_y
 
     Quindi il valore restituito e' gia' l'errore finale
     nella scala originale del dataset.
     """
-    input_name = session.get_inputs()[0].name
-    layout = get_onnx_input_layout(session)
+    input_name = session.get_inputs()[0].name                       # Get the name of the input node of the ONNX model
+    layout = get_onnx_input_layout(session)                         # Get the input layout of the ONNX model (NHWC or NCHW)
 
     # (224, 224, 3) -> (1, 224, 224, 3)
     input_data = np.expand_dims(image, axis=0).astype(np.float32)
 
-    # Supporto eventuale a modelli NCHW.
+    # Support for eventual NCHW models.
     if layout == "NCHW":
         input_data = np.transpose(input_data, (0, 3, 1, 2))
 
@@ -130,6 +125,6 @@ def apply_onnx_model(session, image):
         {input_name: input_data}
     )[0]
 
-    # Il modello e' di regressione: output atteso (1, 1).
+    # The model is a regression model: expected output (1, 1).
     return float(np.squeeze(prediction))
 

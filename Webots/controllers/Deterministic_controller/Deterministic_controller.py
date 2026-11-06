@@ -2,9 +2,36 @@
 
 from controller import Robot        # Import Webots robot API
 import numpy as np                  # Import numpy for array operations
+import csv
+import json
+import time as tm
+from pathlib import Path
 from simple_pid import PID          # Import PID controller library
 from controller import Display      # Import Display module for debug visualization
 from collections import deque       # Import deque for efficient circular buffer
+
+# --- Percorsi ---
+BASE_DIR = Path(__file__).resolve().parent
+
+LOG_PATH_CSV = BASE_DIR.parent / "Log" / "line_follower_Deterministic.csv"
+
+LOG_PATH_JSON = BASE_DIR.parent / "Log" / "line_follower_Deterministic.json"
+
+# --- Variabili PID ---
+KP = 0.05          # Proportional gain
+KI = 0.0           # Integral gain
+KD = 0.0           # Derivative gain
+
+# --- Variabili di log ---
+MASKED = True       # If True, the time start before the masked calculation is measured, otherwise after the masked calculation
+PID_CONTROL = True  # If True the time end before the PID calculation is measured, otherwise after the PID calculation
+LOG_CSV = True
+LOG_JSON = True
+
+TIME = []
+LOG_TIMESTAMP = []
+LOG_ERROR = []
+LOG_STEERING = []
 
 # --- Inizializzazione robot ---
 robot = Robot()                             # Create robot instance
@@ -161,16 +188,26 @@ def draw_debug(mask, results, used_error):
 
 
 # --- Configurazione PID ---
-pid = PID(Kp=0.05, Ki=0.0, Kd=0.0, setpoint=0)   # Create PID controller with proportional gain only
+pid = PID(Kp=KP, Ki=KI, Kd=KD, setpoint=0)      # Create PID controller with proportional gain only
 pid.output_limits = (-MAX_STEER, MAX_STEER)     # Set output limits for steering
 pid.sample_time = timestep / 1000.0             # Set PID sample time
+
+tempo = 0
 
 # --- Main control loop ---
 while robot.step(timestep) != -1:                           # Loop while simulation is running
     gray, raw = get_gray_image()                            # Capture camera image and convert to grayscale
+    if not MASKED:  
+        start_time = tm.time()                              # Start timing for performance measurement
     mask = (gray < BLACK_THRESHOLD).astype(np.uint8) * 255  # Create binary mask (line = 255)
-
+    
+    if MASKED:
+        start_time = tm.time()
     final_error, results = compute_final_error(mask)    # Calculate line position error
+
+    if PID_CONTROL:
+        end_time = tm.time()                                # End timing for performance measurement
+                                 
     line_found = final_error is not None                # Check if line was detected
 
     if line_found:                          # If line detected
@@ -187,7 +224,19 @@ while robot.step(timestep) != -1:                           # Loop while simulat
         used_error = last_error                                 # Use last valid error
 
     steering = pid(used_error)                              # Calculate steering adjustment using PID controller
+    if not PID_CONTROL:                                     # If PID control is disabled
+        end_time = tm.time()                                # End timing for performance measurement
+
+    inference_time = end_time - start_time                  # Calculate inference time
+    TIME.append(inference_time)                             # Log inference time
+
+    tempo += timestep                                       # Update simulation time
+    LOG_TIMESTAMP.append(tempo)                             # Log current simulation time
+    LOG_ERROR.append(final_error)                           # Log current error value
+    
     steering = max(-MAX_STEER, min(MAX_STEER, steering))    # Clamp steering to maximum limits
+
+    LOG_STEERING.append(steering)                           # Log steering value
 
     if lost_counter < LOST_THRESHOLD:       # If line lost for just a few frames
         # Line briefly lost: continue with last valid steering
@@ -207,4 +256,30 @@ while robot.step(timestep) != -1:                           # Loop while simulat
     draw_debug(mask, results, used_error)  # Draw debug visualization on displays
 
     print(f"err={used_error:.1f}  steer={steering:.2f}  L={left_speed:.2f} R={right_speed:.2f}  lost={lost_counter}")  # Print debug info
+
+# Salva i dati in un file CSV
+if LOG_CSV:
+    with open(LOG_PATH_CSV, mode='w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Timestamp (ms)', 'Error', 'Steering', 'Inference_Time'])
+        for i in range(len(LOG_TIMESTAMP)):
+            writer.writerow([
+                LOG_TIMESTAMP[i],
+                LOG_ERROR[i],
+                LOG_STEERING[i],
+                TIME[i]
+            ])
+
+# Salva i dati in un file JSON
+if LOG_JSON:
+    log_data = {
+        "mean inference_time": float(np.mean(TIME)),
+        "std inference_time": float(np.std(TIME)),
+        "max positive error": float(np.max(LOG_ERROR)),
+        "max negative error": float(np.min(LOG_ERROR)),
+        "mean error": float(np.mean(LOG_ERROR))
+    }
+
+    with open(LOG_PATH_JSON, mode='w') as f:
+        json.dump(log_data, f, indent=4)
     
